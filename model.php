@@ -1,12 +1,12 @@
 
 <?php
-class navigation
+class Model
 {
-  protected $nav;
+  protected $list;
 
   function __construct()
   {
-    $this->nav = [
+    $this->list = [
       [1, 'Item1', 0],
       [2 ,'Item2', 0],
       [3, 'Item3', 0],
