@@ -2,9 +2,9 @@
 <?php
 class Model
 {
-  protected $list;
+  public $list;
 
-  function __construct()
+  public function __construct()
   {
     $this->list = [
       [1, 'Item1', 0],
