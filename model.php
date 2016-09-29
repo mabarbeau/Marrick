@@ -3,6 +3,7 @@
 class Model
 {
   public $list;
+  public $structure;
 
   public function __construct()
   {
@@ -21,17 +22,35 @@ class Model
       [12, 'Item32', 3],
     ];
 
-     $filtered = $this->filter(0);
+     $this->structure = $this->walk(0);
   }
 
   public function filter($key)
   {
-    $filtered = array_filter($this->list, function($item)
+    $filtered = array_filter($this->list, function($item) use ($key)
       {
-        return $item[2] === 0;
+        return $item[2] === $key;
       }
     );
 
     return $filtered;
   }
+
+  public function walk($key)
+  {
+    $filtered = $this->filter($key);
+
+    foreach ($filtered as $key => $item)
+    {
+      $child = $this->walk($item[0]);
+
+      if(!empty($child))
+      {
+        $filtered[$key][3] = $child;
+      }
+    }
+
+    return $filtered;
+  }
+
 }
