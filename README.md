@@ -1,8 +1,6 @@
-# Marrick
-Sample problem for Marrick Application
+#Sample problem for Marrick Application
 
-
-Please provide your own custom working solution to the following problem in concise PHP code:
+##Please provide your own custom working solution to the following problem in concise PHP code:
 
 We want to be able to output a multi-level nested list of items in HTML. A simple SQL table would have the following data elements: itemID – int, item – varchar, subItemOfID – int, where subItemOfID contains the itemID of the parent item. A sample of the data would look something like this:
 
