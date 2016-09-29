@@ -2,7 +2,7 @@
 <?php
 class Model
 {
-  public $list;
+  protected $list;
   public $structure;
 
   public function __construct()
@@ -25,7 +25,7 @@ class Model
      $this->structure = $this->walk(0);
   }
 
-  public function filter($key)
+  protected function filter($key)
   {
     $filtered = array_filter($this->list, function($item) use ($key)
       {
@@ -36,7 +36,7 @@ class Model
     return $filtered;
   }
 
-  public function walk($key)
+  protected function walk($key)
   {
     $filtered = $this->filter($key);
 
