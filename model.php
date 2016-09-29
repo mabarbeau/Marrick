@@ -20,5 +20,18 @@ class Model
       [11, 'Item31', 3],
       [12, 'Item32', 3],
     ];
+
+     $filtered = $this->filter(0);
+  }
+
+  public function filter($key)
+  {
+    $filtered = array_filter($this->list, function($item)
+      {
+        return $item[2] === 0;
+      }
+    );
+
+    return $filtered;
   }
 }
