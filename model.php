@@ -3,13 +3,18 @@
 class Model
 {
   protected $list;
-  public $structure;
+  protected $structure;
 
   public function __construct()
   {
     $this->list = array_map('str_getcsv', file('data.csv'));
 
     $this->structure = $this->walk(0);
+  }
+
+  public function all()
+  {
+    return $this->structure;
   }
 
   protected function filter($key)
