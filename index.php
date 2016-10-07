@@ -1,5 +1,4 @@
 <?php
-  require('functions.php');
   require('model.php');
   require('view.php');
   require('controller.php');
