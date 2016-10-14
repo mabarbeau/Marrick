@@ -7,7 +7,7 @@ class Model
 
   public function __construct()
   {
-    $this->list = array_map('str_getcsv', file('data.csv'));
+    $this->list = array_map('str_getcsv', file('database/data.csv'));
 
     $this->structure = $this->walk(0);
   }
