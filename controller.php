@@ -12,8 +12,14 @@ class Controller
     }
 
     public function index() {
+      ob_start();
+
       $this->view->output($this->model->all());
-      
+      $body = ob_get_contents();
+
+      ob_end_clean();
+
+      require('views/layout.php');
     }
 
 }

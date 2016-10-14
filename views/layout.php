@@ -11,8 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-          <?php $body='test' ?>
-          <?=$body?>
+
         </title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -26,7 +25,6 @@
 
     </head>
     <body>
-        <?php $body='test'?>
         <?=$body?>
     </body>
 
