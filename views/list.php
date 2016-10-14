@@ -1,5 +1,5 @@
 <?php
-class View
+class Lists
 {
 
   public function output($model)

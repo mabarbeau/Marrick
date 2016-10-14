@@ -8,7 +8,7 @@ class Controller
     public function __construct() {
       $this->model =  new Model();
 
-      $this->view = new View();
+      $this->view = new Lists();
     }
 
     public function index() {
