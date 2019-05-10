@@ -1,4 +1,4 @@
-# Sample problem for Marrick Application
+# Sample problem
 
 ## Please provide your own custom working solution to the following problem in concise PHP code:
 
